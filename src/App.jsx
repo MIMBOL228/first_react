@@ -1,7 +1,10 @@
 import './App.css';
+import {NavBar} from "./components/NavBar";
 
 function App({name}) {
-  return null;
+  return (
+      <NavBar/>
+  );
 }
 
 export default App;
