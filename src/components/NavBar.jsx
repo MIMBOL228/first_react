@@ -1,6 +1,11 @@
-import {Container, Navbar, Nav, NavDropdown, Form, Button} from 'react-bootstrap';
-var login = "mimbol";
+import {useContext} from "react";
+import {Container, Navbar, Nav} from 'react-bootstrap';
+import {RegisterModalContext} from "../context/RegisterModalContext";
+import {LoginModalContext} from "../context/LoginModalContext";
+var login = "";
 export function NavBar(props){
+    const {regModal,regOpen,regClose} = useContext(RegisterModalContext);
+    const {logModal,logOpen,logClose} = useContext(LoginModalContext);
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
@@ -16,8 +21,8 @@ export function NavBar(props){
                     <Nav>
                         { login == "" &&
                             <>
-                                <Nav.Link href="#reg">Регистрация</Nav.Link>
-                                <Nav.Link href="#log">Войти</Nav.Link>
+                                <Nav.Link href="#reg" onClick={regOpen}>Регистрация</Nav.Link>
+                                <Nav.Link href="#log" onClick={logOpen}>Войти</Nav.Link>
                             </>
                         }
                         { login !== "" &&
