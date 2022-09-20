@@ -5,7 +5,7 @@ import {Container, Navbar, Nav, Modal, Button} from 'react-bootstrap';
 
 function App() {
 
-    var login = "mimbol";
+    var login = "";
 
     const [logModal, LogSetModal] = useState(false);
     const logOpen = () => {
@@ -65,7 +65,7 @@ function App() {
                 <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={logClose}>
-                        Отмена
+                        Закрыть
                     </Button>
                     <Button variant="primary" onClick={logClose}>
                         Продолжить
@@ -80,7 +80,7 @@ function App() {
                 <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={regClose}>
-                        Продолжить
+                        Закрыть
                     </Button>
                     <Button variant="primary" onClick={regClose}>
                         Продолжить
